@@ -1,0 +1,10 @@
+version: '2'
+services:
+  mp4-to-dash:
+    image: repo.wolle.dev/utils/mp4-to-dash:1.0.1
+    build: .
+    tty: true
+    volumes:
+      - "./in:/opt/mp4/in"
+      - "./out:/opt/mp4/out"
+      - "./tmp:/opt/mp4/tmp"
